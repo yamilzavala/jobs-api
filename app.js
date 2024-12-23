@@ -30,11 +30,7 @@ app.use(rateLimiter({
 }))
 app.use(express.json());
 app.use(helmet())
-app.use(cors({
-  origin: 'http://localhost:3000', // replace with your domain
-  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
-  credentials: true
-}))
+app.use(cors())
 app.use(xss())
 
 app.get('/', (req, res) => {
