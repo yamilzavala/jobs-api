@@ -25,7 +25,7 @@ const authenticateUser = require('./middleware/authentication')
 //extra 
 app.set('trust proxy', 1)
 app.use(rateLimiter({
-  windowMs: 15 * 60 * 1000, // 15 minutes
+  windowMs: 60 * 60 * 1000, // 15 minutes
 	limit: 100 //Limit each IP to 100 requests per `window`
 }))
 
